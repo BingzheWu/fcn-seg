@@ -5,7 +5,7 @@ import os
 import copy
 import glob
 import numpy as np
-
+import cv2
 from PIL import Image
 
 
@@ -24,7 +24,10 @@ class voc:
         self.palette = palette_im.palette
 
     def load_image(self, idx):
-        im = Image.open('{}/JPEGImages/{}.jpg'.format(self.dir, idx))
+        #im = Image.open('{}/JPEGImages/{}.jpg'.format(self.dir, idx))
+        im = cv2.imread('{}/JPEGImages/{}.jpg'.format(self.dir, idx))
+        b,g,r = cv2.split(im)
+        im = cv2.merge([r,g,b])
         return im
 
     def load_label(self, idx):
