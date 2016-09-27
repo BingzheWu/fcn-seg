@@ -40,5 +40,5 @@ def load_data( batch_idx, batch_size):
     return np.array(images), np.array(labels)
 if __name__ == '__main__':
     s,t = load_data(1, 20)
-    print s[0].shape
-    print t[0].shape
+    print s[18].shape
+    print t[18].shape
