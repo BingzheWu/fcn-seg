@@ -1,2 +1,2 @@
 from . import data_utils
-from . import models
+import models
