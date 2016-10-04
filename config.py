@@ -1,6 +1,6 @@
 import tensorflow as tf
 FLAGS = tf.app.flags.FLAGS
-tf.app.flags.DEFINE_float("learning_rate", 0.01, "initial learning rate for training")
+tf.app.flags.DEFINE_float("learning_rate", 1e-5, "initial learning rate for training")
 tf.app.flags.DEFINE_string("checkpoint_path", 'res_34_64/', "path to checkpoint_dir")
 tf.app.flags.DEFINE_string('voc_dir', '/home/ceca/bingzhe/data/VOC2012', "This is /path/to/voc_data")
 tf.app.flags.DEFINE_float('decay_factor', 0.01, "lr decay factor")
